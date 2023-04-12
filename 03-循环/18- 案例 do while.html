@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//1. 打印人的一生 1岁出生 100岁死亡
+			var age = 1;
+			do {
+				console.log('你今年' + age + ' 岁了');
+				age ++
+			}while( age <= 100);
+			
+			//2. 计算 1 ~ 100之间所有整数的和
+			var rel = 0;
+			var i = 1;
+			do {
+				rel = rel + i;
+				i ++;
+			}while( i <= 100);
+			console.log('1 ~ 100 之间整数的和为' + rel);
+			//3. 弹出一个提示框， 你爱我吗？ 如果输入我爱你 就提示结束 否则一直弹出
+			do {
+					var userInput = prompt('你爱我吗？');
+			}while ( userInput !== '我爱你');
+			alert('结束');
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

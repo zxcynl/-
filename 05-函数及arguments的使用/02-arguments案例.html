@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		// 案例: 求任意个数的最大值
+		function getMax(){
+			var max = arguments[0];
+			for( var i = 1; i < arguments.length; i ++){
+				if ( max < arguments[i]){
+					max = arguments[i];
+				}
+			}
+			return alert(max);
+		}
+		getMax(1,2,3,4,5,33,3,19);
+	</script>
+	<body>
+	</body>
+</html>

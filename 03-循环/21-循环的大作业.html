@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 1. 求1-100 之间所有数总和与平均值
+			
+			var sum = 0;
+			for( var i = 1; i <= 100; i++){
+				var average = 0;
+				sum = sum + i;
+			}average = sum / 100;
+			console.log(' 1 - 100 之间所有数的平均值为' + average + ' 和为' + sum);
+			console.log('——————————————————————————————————————————————————————————————————————————————————————');
+			// 2. 求 1-100 之间所有偶数的和
+			var evensum = 0;
+			for( var j = 0; j <= 100; j++){
+				if( j % 2 == 0){
+					evensum = evensum + j;
+				}
+			}
+			console.log(' 1 - 100 之间所有偶数的和为' + evensum);
+			console.log('——————————————————————————————————————————————————————————————————————————————————————');
+			// 3. 求 100 以内 7 的倍数的和
+			var sevensum = 0;
+			for( var x = 0; x <= 100; x++){
+				if( x % 7 == 0){
+					sevensum = sevensum + x;
+				}
+			}console.log(' 1- 100 之间所有 7 的倍数的和为' + sevensum);
+			// 4. 使用 for  循环打印 5 * 5 的星星
+			var rel = '';
+			for( var row = 1; row <= 5; row++){
+				for( var col = 1; col <=5 ; col++){
+					rel = rel + '*';
+				}
+				rel = rel + '\n';
+			}console.log(rel);
+			console.log('——————————————————————————————————————————————————————————————————————————————————————');
+			// 5. 使用for循环打印正三角 5 行
+			var two_rel = '';
+			for( var v = 1; v <= 5; v++){
+				for( var l = 1; l <= v; l ++){
+					two_rel = two_rel + '*';
+				}
+				two_rel += '\n';
+			}console.log(two_rel);
+			console.log('——————————————————————————————————————————————————————————————————————————————————————');
+			// 6. 接收 for 循环打印 99 乘法表
+			var res = '';
+			for( var k = 1; k <= 9; k++){
+				for( var o = 1; o <= k; o++){
+				var result = k + ' X ' + o + ' = ' + k * o + '\t';
+				res += result;
+				}
+				res = res + "\n";
+			}console.log(res);
+			console.log('——————————————————————————————————————————————————————————————————————————————————————');
+			// 7. 接收用户输入的用户名和密码，若用户名为 “admin” 密码为 “123456” ，则提示登陆成功 否则一直弹出输入框
+			var g = 0;
+			do {
+				if( g >= 1){
+					alert('请输入正确的账户与密码');
+				}
+				var username  = prompt('请输入您的用户名');
+				var passwd = prompt('请输入您的密码');
+				g++;
+			}while( username !== 'admin' && passwd !== '123456');
+			alert('登录成功');
+			// 8. 求整数 1 - 100的累加值， 但要求跳过所有个位 为3 的数 用 continue实现
+			var sum = 0;
+			for( var t = 1; t <= 100; t++){
+				if( t % 10 == 3 )
+				{
+					continue;
+				}
+				sum = sum + t;
+			}console.log('1 - 100 中除去个位数上为 3 的数 和为' + sum);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

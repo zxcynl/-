@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		// ATM案例
+		// 要求： 里面存有 100 块钱
+		// 1. 如果存钱 就加上 用户输入的钱数
+		// 2. 如果取钱 就减去 用户输入的钱数
+		// 3. 如果显示余额 就输出余额
+		// 4. 如果退出，弹出退出信息提示框 、
+			var money = 100;
+			do {
+				var business = prompt('1. 存钱 \n 2. 取钱 \n 3. 显示余额 \n 4. 退出');
+					if( business == '1' || business == '2' || business == '3' || business == '4'){
+						switch (business){
+							case '1':
+								var strore = prompt('请输入您要存款的数额');
+								money = money + parseFloat(strore);
+								alert('您当前的余额为' + money);
+							break;
+							case '2':
+								var take = prompt('请输入您要取款的数额');
+								if( parseFloat(take) > money)
+								{
+									alert('余额不足');
+								}else {
+									money = money - parseFloat(take);
+								}
+								alert('您当前的余额为' + money);
+							break;
+							case '3':
+								alert('您当前的余额为' + money + '元');
+							break;
+							}
+								
+						} else {
+							alert('业务暂时未开通');
+						}
+				}while ( business !== '4');
+				alert('欢迎下次管                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             光临');
+					
+				
+		
+	</script>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		console.log('倒三角五角星');
+		var str = "";
+		for( var i = 1; i <= 5; i++ ){ //外层循环负责打印五行
+			for( var j = 1; j <= 5; j++ ){//里层循环负责打印五个星星
+				str = str + '*';
+			}
+			// 如果一行打印完毕就要另起一行
+			str = str  + '\n';
+		}console.log(str);
+	</script>
+	<body>
+	</body>
+</html>

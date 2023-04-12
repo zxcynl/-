@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+		//使用表单,prompt获取过来的数据默认是字符串类型的,此时就不能直接简单的进行加法运算,需要转换变量的数据类型
+		//1.把数字型转换为字符串型
+			var num = 10;
+			var str = num.toString();
+			console.log(str);
+			console.log(typeof str);
+		//2.我们利用string(变量)
+		console.log(String(num));
+		//3.利用 + 拼接字符串的方法实现转换效果 隐式转换
+		console.log(num);
+		console.log(num + '');
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

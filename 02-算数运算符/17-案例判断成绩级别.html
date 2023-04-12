@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		//案例: 用户输入成绩 判断用户输入的成绩属于什么等级
+		var grades = prompt('请输入你的成绩');
+		// var sorce = grades - 0;
+		if (grades >=0 && grades <=100)
+		{
+			if (grades >= 90){
+				alert('A');
+			} else if (grades >= 80 && grades < 90){
+				alert('B');
+			} else if (grades >= 70 && grades < 80){
+				alert('C');
+			} else if (grades >= 60 && grades < 70){
+				alert('D');
+			} else {
+				alert('E');
+			}
+			
+		} else alert('请重新输入')
+		
+	</script>
+	<body>
+	</body>
+</html>

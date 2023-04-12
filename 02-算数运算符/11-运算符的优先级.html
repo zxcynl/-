@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		// ++num	!num	2 + 3
+		/* 
+		运算符优先级
+			优先级		运算符		顺序
+			1			小括号		()
+			2			一元运算符	++ -- !
+			3			算数运算符	先 * / % 后 + -
+			4 			关系运算符	> >= < <=
+			5			相等运算符	== != === !==
+			6			逻辑运算符	先 && 后 ||
+			7			赋值运算符	=
+			8			逗号运算符	, 
+			一元运算符里面的逻辑非 优先级很高
+		*/
+	   //练习
+	   console.log( 4 >= 6 || '人' != '阿凡达' && !(12 * 2 == 144) && true);// true
+	   var num = 10;
+	   console.log( 5 == num / 2 && (2 + 2 * num).toString() === '22'); // true
+	console.log('-------------------------');
+	  //练习2
+	  var a = 3 > 5 && 2 < 7 && 3 == 4; // false
+	  console.log(a);
+	  
+	  var b = 3 <= 4 || 3 > 1 || 3 != 2; // true
+	  console.log(b);
+	  
+	  var c = 2 ==='222';	// false
+	  console.log(c);
+	  
+	  var d = !c || b && a;	// true
+	  console.log(d);
+	</script>
+	<body>
+	</body>
+</html>

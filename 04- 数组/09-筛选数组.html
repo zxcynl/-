@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 筛选数组 将数组 [22,0,6,1,77,,0,53,25,71] 大于等于10 的元素选出来 放入新数组
+			var arr = [22,0,6,1,77,,0,53,25,71];
+			var newarr = [];
+			var j = 0;
+			for (var i = 0; i < arr.length; i ++){
+				if ( arr[i] >= 10){
+					newarr[j] = arr[i];
+					j ++;
+				}
+			}console.log(newarr);
+			
+			//方法二
+			var arr = [22,0,6,1,77,,0,53,25,71];
+			var newarr = [];
+			for (var i = 0; i < arr.length; i ++){
+				if ( arr[i] >= 10){
+					// 新数组索引号应该从 0 开始 依次递增
+					newarr[newarr.length] = arr[i];
+				}
+			}console.log( newarr);
+		</script>
+	</body>
+</html>

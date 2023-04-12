@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 程序随机生成一个 1 ~ 10 的之间的数字 并让用户输入一个数字
+			// 定义一个能随机生成 1 ~ 10 之间的数字的函数
+			// function getrandom(min,max) {
+			// 	return Math.floor( Math.random() * (max - min +1)) + min;
+			// }
+			// var num = getrandom(1,50);
+			// alert(num);
+			// var rel = '';
+			// while ( rel != num){
+			// 	var rel = prompt('请输入数字');
+			// 	 if ( rel > num && rel >= 1 && rel <= 10){
+			// 		 alert('猜大了');
+			// 	 } else if(rel < num && rel >= 1 && rel <= 10){
+			// 		alert('猜小了');
+			// 	 } else if ( rel == num && rel >= 1 && rel <= 10){
+			// 		 alert('猜对了');
+			// 	 }	else if ( rel < 1 || rel > 10){
+			// 		 alert('输入不合法');
+			// 	 }
+																																																																																																																																																																																																																																																																																																																																								 
+			// }
+			// while (true) {  // 死循环
+			// 	var rel = prompt('请输入数字');
+			// 	 if ( rel > num && rel >= 1 && rel <= 10){
+			// 		 alert('猜大了');
+			// 	 } else if(rel < num && rel >= 1 && rel <= 10){
+			// 		alert('猜小了');
+			// 	 } else if ( rel == num && rel >= 1 && rel <= 10){
+			// 		 alert('猜对了');
+			// 		 break;	//退出整个循环
+			// 	 }	else if ( rel < 1 || rel > 10){
+			// 		 alert('输入不合法');
+			// 	 }
+						
+			// }
+			// 作业 要求用户猜 1 ~ 10 之间的数字 但是只有 10 次猜的机会
+			function getrandom(min,max) {
+				return Math.floor( Math.random() * (max - min + 1)) + min;
+			}
+			var num = getrandom(1,50);
+			alert(num);
+			while(true){
+				for( var i = 0 ; i < 10; i ++ ){
+					var rel = prompt('请输入数字，当前还剩' + (10 - i) + '次机会');
+					if ( rel > num ){
+						alert('猜大了');
+					} else if ( rel < num){
+						alert('猜小了');
+					} else if ( rel = num){
+						alert('猜对了');
+						break;
+					}
+				}break;
+			}
+		</script>
+	</body>
+</html>

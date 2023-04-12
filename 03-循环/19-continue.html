@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		// continue 关键字	退出当前次的循环 继续执行剩余次循环
+		for ( var i = 1; i <= 5; i++){
+				if( i == 3){
+						continue; // 只要遇到 continue就退出本次循环 执行 i ++ ；
+				} 
+				console.log('我正在吃第' + i + '个包子');
+			}
+			
+		
+		// 案例 1. 求 1 ~ 100 之间， 除了能被 7 整除之外的整数和
+		var sum = 0;
+		for ( var j = 1; j <= 100; j++){
+			if( j % 7 == 0){
+				continue;
+			}
+			sum = sum + j;
+			
+		}console.log('求 1 ~ 100 之间， 除了能被 7 整除之外的整数和为' + sum);
+	</script>
+	<body>
+	</body>
+</html>
