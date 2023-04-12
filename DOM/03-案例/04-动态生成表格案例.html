@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid #333;
+        }
+        
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+			
+        </tbody>
+    </table>
+    <script>
+		// 1.先准备好学生的数据
+		var datas = [	//数组里可以存放任何数据
+			{
+				name:'张三',
+				subject:'Javascript',
+				score:100
+			},
+			{
+				name:'李四',
+				subject:'Javascript',
+				score:98
+			},
+			{
+				name:'王五',
+				subject:'Javascript',
+				score:78
+			},
+			{
+				name:'赵六',
+				subject:'Javascript',
+				score:88
+			},
+			{
+				name:'孙七',
+				subject:'Javascript',
+				score:89
+			}
+		];
+		// 2. 在tbody里创建行： 有几个人（通过数组的长度） 我们就创建几行
+		var tbody = document.querySelector('tbody');
+		var thead = document.querySelector('thead');
+		console.log(tbody);
+		for( var i = 0; i < datas.length; i ++){	//外面创建 tr 的for循环
+			//1. 创建tr 行 
+			var tr = document.createElement('tr');
+			tbody.appendChild(tr);
+			//2. 行里面创建单元格 td(跟数据有关系的 3 个单元格)  单元格的数量取决于每个对象里面属性的个数	for循环遍历这个对象
+			for(var k in datas[i]){	// 里面的for循环管列 td
+				// 创建单元格
+				var td = document.createElement('td');
+				// 把对象里面的属性值 给 td
+				// 因为是双重 for 循环 所以创建一个 tr 时，就会创建数量和 对象里属性数量 相同的个数， for（var k in obj) 会遍历对象
+				// k输出属性名 obj[k] 输出属性值
+				td.innerHTML = datas[i][k];
+				tr.appendChild(td);
+			} 
+			// 3. 创建有 删除 两个字 的单元格
+			var td = document.createElement('td');
+			td.innerHTML = "<a href = 'javascript:;'>删除</a>";
+			tr.appendChild(td);
+		}
+			// 4. 当点击删除时，将 a 所在的当前行(爸爸的爸爸)删除
+			var as = document.querySelectorAll('a');
+			console.log(as);
+			for(var i = 0; i < as.length; i ++){
+				as[i].onclick = function (){
+					tbody.removeChild(this.parentNode.parentNode);
+				}
+			}
+    </script>
+</body>
+
+</html>
