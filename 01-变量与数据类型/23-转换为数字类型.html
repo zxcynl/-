@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var age = prompt('请输入你的年龄');
+			//1. parseInt(变量) 可以把 字符串类型的数字 转换为数字型 得到的是整数
+			console.log(parseInt(age));
+			console.log(parseInt('2.12')); // 保留整数 2
+			console.log(parseInt('120px')); // 	120 会去掉px单位
+			console.log(parseInt('rem120px')); // NaN
+			//2. parseFloat(变量) 可以把 字符型的转换为数字型， 得到的是小数 浮点型
+			console.log(parseFloat('3.13'));
+			console.log(parseFloat('3'));
+			//3. 利用Number(变量)
+			var str = '123';
+			console.log(Number(str));
+			console.log(Number('12'));
+			//4. 利用了算数运算 - * / 隐式转换
+			console.log('12' - 0); //12
+			console.log('12' - '11'); //1  只要不是 + 号 ，就不会拼接
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
