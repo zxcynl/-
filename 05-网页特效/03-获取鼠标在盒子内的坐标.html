@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				margin: 100px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			// 获取事件源
+			var x= 0;
+			var y = 0;
+			var div = document.querySelector('div');
+			div.addEventListener('mousemove',fn1);
+			function fn1(e) {
+				x = e.pageX - this.offsetLeft;
+				y = e.pageY - this.offsetTop;
+				div.innerHTML = '鼠标在div中的坐标为('+ x +',' + y + ')';
+			}
+		</script>
+	</body>
+</html>
