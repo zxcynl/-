@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+        
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+		// 1. 获取元素
+		var hour = document.querySelector('.hour')// 小时的盒子
+		var minute = document.querySelector('.minute')// 分钟的盒子
+		var second = document.querySelector('.second')// 秒数的盒子
+		console.log(second);
+		var time2 = +new Date('2023-04-14 18:00:00');
+		timer(); // 我们先调用一次函数，防止第一次刷新有空白
+		// 2 . 开启定时器
+		setInterval(timer,1000);
+		function timer() {
+			var time1  = +new Date();
+			var rel = (time2-time1) / 1000;
+			var h =parseInt(rel / 60 / 60 % 24);
+			h = h < 10 ? '0' + h : h;
+			hour.innerHTML = h; // 把剩余的小时给 小时盒子
+			
+			var m = parseInt(rel / 60 % 60);
+			m = m < 10 ? '0' + m : m;
+			minute.innerHTML = m; // 把剩余的分钟给 分钟盒子
+			
+			var s = parseInt(rel % 60);
+			s = s < 10 ? '0' + s : s;
+			second.innerHTML = s; // 把剩余的秒给 秒盒子
+			// console.log(s);
+		}
+    </script>
+</body>
+
+</html

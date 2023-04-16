@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			img{
+				position: fixed;
+				top: 10px;
+				left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="../images/angel.gif" alt="">
+	<script>
+		// 1. mousemove 只要我们鼠标移动1像素就会触发事件
+		// 2 .核心原理 每次鼠标移动，都会获取新的坐标值给图片
+		var img = document.querySelector('img');
+		document.addEventListener('mousemove',function(e){
+			img.style.top = e.pageY + 'px';
+			img.style.left = e.pageX + 'px';
+		})
+	</script>
+	</body>
+
+</html>
